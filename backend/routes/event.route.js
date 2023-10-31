@@ -38,20 +38,20 @@ eventRouter.post("/events", async (req, res) => {
   }
 });
 
-eventRouter.get("/:eventName", async (req, res) => {
-  try {
-    const selectedEvent = await getEvent(req.params.eventName);
-    if (selectedEvent) {
-      res
-        .status(201)
-        .json({ message: "Event fetched successfully", event: selectedEvent });
-    } else {
-      res.status(404).json({ error: "Event not found" });
-    }
-  } catch (error) {
-    res.status(500).json({ error: "Failed to fetch event", error });
-  }
-});
+// eventRouter.get("/:eventName", async (req, res) => {
+//   try {
+//     const selectedEvent = await getEvent(req.params.eventName);
+//     if (selectedEvent) {
+//       res
+//         .status(201)
+//         .json({ message: "Event fetched successfully", event: selectedEvent });
+//     } else {
+//       res.status(404).json({ error: "Event not found" });
+//     }
+//   } catch (error) {
+//     res.status(500).json({ error: "Failed to fetch event", error });
+//   }
+// });
 
 eventRouter.post("/events/:eventId", async (req, res) => {
   try {

@@ -13,7 +13,7 @@ const volunteerRouter = express.Router();
 volunteerRouter.get("/volunteer", async (req, res) => {
   try {
     const allVolunteers = await getAllVolunteers();
-    res.status(201).json({
+    res.status(200).json({
       message: "Volunteers fetched successfully",
       volunteers: allVolunteers,
     });
