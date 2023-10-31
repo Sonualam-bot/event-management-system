@@ -2,42 +2,42 @@
     {
       "name": "Jennifer Aniston",
       "contact": 9876543200,
-      "skills": ["JavaScript", "HTML", "CSS", "Python"],
+      "skills": "JavaScript",
       "availability": true,
-      "areasOfInterest": ["Web Development", "Data Science"],
-      "events": ["65329b0007b3ce116f982191"]
+      "areasOfInterest": "Web Development",
+      "events": "6540d3fb48766935250c4da3"
     },
     {
       "name": "Leonardo DiCaprio",
       "contact": 9876543201,
-      "skills": ["Java", "C++", "SQL"],
+      "skills": "Java",
       "availability": true,
-      "areasOfInterest": ["Software Engineering", "Artificial Intelligence"],
-      "events": ["65329b0007b3ce116f982191"]
+      "areasOfInterest": "Software Engineering",
+      "events": "6540d3fb48766935250c4da4"
     },
     {
       "name": "Angelina Jolie",
       "contact": 9876543202,
-      "skills": ["Photoshop", "Illustrator", "InDesign"],
+      "skills": "Photoshop",
       "availability": false,
-      "areasOfInterest": ["Graphic Design", "User Interface Design"],
-      "events": ["65329ab6f56fadbec55775e1", "65329b0007b3ce116f982191"]
+      "areasOfInterest": "Graphic Design",
+      "events": "6540d3fb48766935250c4da5"
     },
     {
       "name": "Tom Hanks",
       "contact": 9876543203,
-      "skills": ["Marketing", "Social Media Management", "SEO"],
+      "skills": "Marketing",
       "availability": true,
-      "areasOfInterest": ["Digital Marketing", "Content Creation"],
-      "events": ["65329ab7f56fadbec55775e4"]
+      "areasOfInterest": "Digital Marketing",
+      "events": "6540d3fb48766935250c4da5"
     },
     {
       "name": "Scarlett Johansson",
       "contact": 9876543204,
-      "skills": ["Java", "Python", "Machine Learning"],
+      "skills": "Java",
       "availability": false,
-      "areasOfInterest": ["Data Science", "Artificial Intelligence"],
-      "events": ["65329b0407b3ce116f982194"]
+      "areasOfInterest": "Data Science",
+      "events": "6540d3fb48766935250c4da5"
     }
   ]
   

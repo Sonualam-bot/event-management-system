@@ -11,7 +11,7 @@ const volunteerSchema = new mongoose.Schema(
       required: true,
     },
     skills: {
-      type: [String],
+      type: String,
       required: true,
     },
     availability: {
@@ -19,16 +19,14 @@ const volunteerSchema = new mongoose.Schema(
       required: true,
     },
     areasOfInterest: {
-      type: [String],
+      type: String,
       required: true,
     },
-    events: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Event",
-        required: true,
-      },
-    ],
+    events: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Event",
+      required: true,
+    },
   },
   {
     timestamps: true,

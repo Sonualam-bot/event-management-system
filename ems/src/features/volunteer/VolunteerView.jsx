@@ -14,6 +14,7 @@ export const VolunteerView = () => {
   const volunteer = useSelector((state) => state.volunteers.volunteers);
   const status = useSelector((state) => state.volunteers.status);
   const dispatch = useDispatch();
+  console.log("from view", volunteer);
 
   const [editVolunteerStatus, setEditVolunteerStatus] = useState(false);
 
@@ -72,9 +73,9 @@ export const VolunteerView = () => {
                     </td>
                     <td> {volunteer?.contact} </td>
                     <td> {volunteer?.skills} </td>
-                    <td> {volunteer?.availability} </td>
+                    <td> {volunteer?.availability.toString()} </td>
                     <td> {volunteer?.areasOfInterest} </td>
-                    <td> {volunteer?.events} </td>
+                    <td> {volunteer?.events.name} </td>
                     <td
                       data-bs-toggle="modal"
                       data-bs-target="#staticBackdrop"

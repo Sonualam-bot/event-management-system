@@ -6,7 +6,6 @@ const getAllVolunteers = async () => {
       path: "events",
       select: "name location",
     });
-    console.log("All volunteers:", allVolunteers);
     return allVolunteers;
   } catch (error) {
     console.log("Error fetching all volunteers");
@@ -21,7 +20,7 @@ const addVolunteer = async (volunteer) => {
       select: "name location",
     });
     const savedVolunteer = await populatedVolunteer.save();
-    if (savedVolunteer && savedVolunteer.events.length) {
+    if (savedVolunteer) {
       console.log("Added new volunteer:", savedVolunteer);
       return savedVolunteer;
     } else {
@@ -35,14 +34,16 @@ const addVolunteer = async (volunteer) => {
 const editVolunteer = async (volunteerId, editedVolunteer) => {
   try {
     const updatedVolunteer = await Volunteer.findByIdAndUpdate(
-      volunteerId,
-      editedVolunteer
+      { _id: volunteerId },
+      editedVolunteer,
+      {
+        new: true,
+      }
     ).populate({
       path: "events",
       select: "name location",
     });
     if (updatedVolunteer) {
-      console.log("Updated volunteer:", updatedVolunteer);
       return updatedVolunteer;
     } else {
       console.log("Unable to update volunteer");

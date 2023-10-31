@@ -1,14 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// const BASE_URL = "http://localhost:4000/api/v1";
 const BASE_URL = "https://event-management-system-5ln9.onrender.com/api/v1";
 
 export const fetchVolunteers = createAsyncThunk(
   "volunteers/fetchVolunteers",
   async () => {
     const response = await axios.get(`${BASE_URL}/volunteer`);
-    console.log(response);
+
     return response.data.volunteers;
   }
 );
@@ -17,6 +16,7 @@ export const addVolunteerAsync = createAsyncThunk(
   "volunteers/addVolunteerAsync",
   async (newVolunteer) => {
     const response = await axios.post(`${BASE_URL}/volunteer`, newVolunteer);
+    console.log(response.data.volunteer);
     return response.data.volunteer;
   }
 );

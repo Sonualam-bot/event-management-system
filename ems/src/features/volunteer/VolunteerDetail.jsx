@@ -10,6 +10,7 @@ export const VolunteerDetail = () => {
   const selectedVolunteer = volunteers?.find(
     (volunteer) => volunteer._id === volunteerId
   );
+  // console.log(selectedVolunteer);
 
   const { name, contact, skills, availability, areasOfInterest, events } =
     selectedVolunteer;

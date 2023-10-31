@@ -6,6 +6,8 @@ import {
   setVolunteerInput,
   updatedVolunteerAsync,
 } from "./VolunteerSlice";
+import { useEffect } from "react";
+import { fetchEvents } from "../events/EventSlice";
 
 export const VolunteerForm = ({
   editVolunteerStatus,
@@ -15,10 +17,10 @@ export const VolunteerForm = ({
   const volunteerDetails = useSelector(
     (state) => state.volunteers.volunteerDetails
   );
+  const events = useSelector((state) => state.events.events);
 
   const handleVolunteerInputForm = (e) => {
     const { name, value } = e.target;
-    console.log({ ...volunteerDetails, [name]: value });
     dispatch(setVolunteerInput({ ...volunteerDetails, [name]: value }));
   };
 
@@ -44,6 +46,12 @@ export const VolunteerForm = ({
   const handleVolunteerCloseForm = () => {
     dispatch(dispatch(resetVolunteerInput()));
   };
+
+  useEffect(() => {
+    if (events.length === 0) {
+      dispatch(fetchEvents());
+    }
+  }, [dispatch, events]);
 
   return (
     <>
@@ -161,23 +169,23 @@ export const VolunteerForm = ({
                     onChange={handleVolunteerInputForm}
                   ></textarea>
                 </div>
-                <div className="mb-3">
-                  <label
-                    htmlFor="exampleFormControlInput1"
-                    className="form-label"
-                  >
-                    Events
-                  </label>
-                  <input
-                    type="text"
-                    name="events"
-                    value={volunteerDetails?.events}
-                    className="form-control  "
-                    id="exampleFormControlInput1"
-                    placeholder="name@example.com"
-                    onChange={handleVolunteerInputForm}
-                  />
-                </div>
+                <select
+                  className="form-select "
+                  name="events"
+                  value={volunteerDetails?.events}
+                  aria-label="Default select example"
+                  onChange={handleVolunteerInputForm}
+                >
+                  <option selected>Select Roles</option>
+                  {events?.map((event) => {
+                    return (
+                      <option key={event?._id} value={event?._id}>
+                        {" "}
+                        {event?.name}{" "}
+                      </option>
+                    );
+                  })}
+                </select>
               </form>
             </div>
             <div className="modal-footer">
