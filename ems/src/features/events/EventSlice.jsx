@@ -5,7 +5,6 @@ const BASE_URL = "https://event-management-system-5ln9.onrender.com/api/v1";
 
 export const fetchEvents = createAsyncThunk("events/fetchEvents", async () => {
   const response = await axios.get(`${BASE_URL}/events`);
-  console.log(response);
   return response.data.events;
 });
 
@@ -22,7 +21,7 @@ export const updateEventAsync = createAsyncThunk(
   async ({ id, updatedEvent }) => {
     console.log(id, updatedEvent);
     const response = await axios.post(`${BASE_URL}/events/${id}`, updatedEvent);
-    console.log(response);
+    console.log({ response });
     return response.data.event;
   }
 );

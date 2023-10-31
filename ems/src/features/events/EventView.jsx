@@ -10,7 +10,6 @@ export const EventView = () => {
   const events = useSelector((state) => state.events.events);
   const status = useSelector((state) => state.events.status);
   const dispatch = useDispatch();
-  console.log(events);
 
   const [editStatus, setEditStatus] = useState(false);
 

@@ -54,7 +54,7 @@ volunteerRouter.get("/:volunteerName", async (req, res) => {
   }
 });
 
-volunteerRouter.put("/volunteer/:volunteerId", async (req, res) => {
+volunteerRouter.post("/volunteer/:volunteerId", async (req, res) => {
   try {
     const updatedVolunteer = await editVolunteer(
       req.params.volunteerId,
