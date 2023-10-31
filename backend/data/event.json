@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Music Festival",
+      "date": "2024-06-25",
+      "location": "Riverside Park",
+      "description": "A festival celebrating music and arts.",
+      "requiredVolunteerRoles": ["Stage Crew", "Security Team"]
+    },
+    {
+      "name": "Science Expo",
+      "date": "2024-07-10",
+      "location": "City Science Museum",
+      "description": "An exhibition of scientific experiments and discoveries.",
+      "requiredVolunteerRoles": ["Exhibit Guide", "Information Desk"]
+    },
+    {
+      "name": "Children's Fun Fair",
+      "date": "2024-07-23",
+      "location": "Fairground Park",
+      "description": "A fun day with games and activities for children.",
+      "requiredVolunteerRoles": ["Activity Supervisor", "Ticketing"]
+    },
+    {
+      "name": "Film Premiere",
+      "date": "2024-08-05",
+      "location": "Downtown Theater",
+      "description": "An exclusive premiere of an independent film.",
+      "requiredVolunteerRoles": ["Usher", "Public Relations"]
+    },
+    {
+      "name": "Health Awareness Campaign",
+      "date": "2024-08-20",
+      "location": "Community Health Center",
+      "description": "Spreading awareness about health and wellness.",
+      "requiredVolunteerRoles": ["Campaign Promoter", "Health Advisor"]
+    },
+    {
+      "name": "Dance Workshop",
+      "date": "2024-09-05",
+      "location": "Dance Academy",
+      "description": "A workshop to learn different dance forms.",
+      "requiredVolunteerRoles": ["Assistant Instructor", "Choreographer"]
+    },
+    {
+      "name": "Technology Summit",
+      "date": "2024-09-20",
+      "location": "Innovation Hub",
+      "description": "A summit on the future of technology and innovation.",
+      "requiredVolunteerRoles": ["Technical Support", "Event Management"]
+    }
+  ]
+  
