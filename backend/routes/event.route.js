@@ -53,11 +53,11 @@ eventRouter.get("/:eventName", async (req, res) => {
   }
 });
 
-eventRouter.put("/events/:eventId", async (req, res) => {
+eventRouter.post("/events/:eventId", async (req, res) => {
   try {
     const updatedEvent = await editEvent(req.params.eventId, req.body);
     if (updatedEvent) {
-      res.status(201).json({
+      res.status(200).json({
         message: "Updated event successfully",
         event: updatedEvent,
       });

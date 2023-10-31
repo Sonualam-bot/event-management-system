@@ -20,7 +20,9 @@ export const addEventAsync = createAsyncThunk(
 export const updateEventAsync = createAsyncThunk(
   "events/updateEventAsync",
   async ({ id, updatedEvent }) => {
+    console.log(id, updatedEvent);
     const response = await axios.post(`${BASE_URL}/events/${id}`, updatedEvent);
+    console.log(response);
     return response.data.event;
   }
 );

@@ -19,7 +19,7 @@ const eventSchema = new mongoose.Schema(
       required: true,
     },
     requiredVolunteerRoles: {
-      type: [String],
+      type: String,
       enum: [
         "Stage Crew",
         "Security Team",

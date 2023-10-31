@@ -27,9 +27,14 @@ const addEvent = async (event) => {
 
 const editEvent = async (eventId, editedEvent) => {
   try {
-    const updatedEvent = await Event.findByIdAndUpdate(eventId, editedEvent);
+    const updatedEvent = await Event.findByIdAndUpdate(
+      { _id: eventId },
+      editedEvent,
+      {
+        new: true,
+      }
+    );
     if (updatedEvent) {
-      console.log("Event updated successfully:", updatedEvent);
       return updatedEvent;
     } else {
       console.log("Unable to update event");
@@ -41,7 +46,7 @@ const editEvent = async (eventId, editedEvent) => {
 
 const deleteEvent = async (eventId) => {
   try {
-    const deletedEvent = await Event.findByIdAndDelete(eventId);
+    const deletedEvent = await Event.findByIdAndDelete({ _id: eventId });
     if (deletedEvent) {
       console.log("Event deleted successfully:", deletedEvent);
       return deletedEvent;
