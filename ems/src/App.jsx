@@ -9,6 +9,8 @@ import { EventView } from "./features/events/EventView";
 import { EventDetail } from "./features/events/EventDetail";
 import { Homepage } from "./pages/Homepage";
 import { Header } from "./components/Header";
+import { VolunteerView } from "./features/volunteer/VolunteerView";
+import { VolunteerDetail } from "./features/volunteer/VolunteerDetail";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/events" element={<EventView />} />
           <Route path="/details/:eventId" element={<EventDetail />} />
+          <Route path="/volunteer" element={<VolunteerView />} />
+          <Route path="/details/:volunteerId" element={<VolunteerDetail />} />
         </Routes>
       </div>
     </>

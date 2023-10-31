@@ -2,7 +2,7 @@ const Volunteer = require("../models/volunteer.model");
 
 const getAllVolunteers = async () => {
   try {
-    const allVolunteers = await Volunteer.find().populate({
+    const allVolunteers = await Volunteer.find({}).populate({
       path: "events",
       select: "name location",
     });
