@@ -4,7 +4,7 @@ import axios from "axios";
 const BASE_URL = "https://event-management-system-5ln9.onrender.com/api/v1";
 
 export const fetchVolunteers = createAsyncThunk(
-  "volunteer/fetchVolunteers",
+  "volunteers/fetchVolunteers",
   async () => {
     const response = await axios.get(`${BASE_URL}/volunteer`);
     console.log(response);
@@ -13,7 +13,7 @@ export const fetchVolunteers = createAsyncThunk(
 );
 
 export const addVolunteerAsync = createAsyncThunk(
-  "volunteer/addVolunteerAsync",
+  "volunteers/addVolunteerAsync",
   async (newVolunteer) => {
     const response = await axios.post(`${BASE_URL}/volunteer`, newVolunteer);
     return response.data.volunteer;
@@ -21,7 +21,7 @@ export const addVolunteerAsync = createAsyncThunk(
 );
 
 export const updatedVolunteerAsync = createAsyncThunk(
-  "volunteer/updatedVolunteerAsync",
+  "volunteers/updatedVolunteerAsync",
   async ({ id, updatedVolunteer }) => {
     console.log(id, updatedVolunteer);
     const response = await axios.post(
@@ -33,7 +33,7 @@ export const updatedVolunteerAsync = createAsyncThunk(
 );
 
 export const deleteVolunteerAsync = createAsyncThunk(
-  "volunteer/deleteVolunteerAsync",
+  "volunteers/deleteVolunteerAsync",
   async (id) => {
     const response = await axios.delete(`${BASE_URL}/volunteer/${id}`);
     return response.data.volunteer;
