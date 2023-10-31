@@ -2,7 +2,7 @@ const Event = require("../models/event.model");
 
 const getAllEvents = async () => {
   try {
-    const allEvents = await Event.find();
+    const allEvents = await Event.find({});
     console.log("All events:", allEvents);
     return allEvents;
   } catch (error) {
