@@ -8,7 +8,7 @@ export const Header = () => {
         <h3>
           {" "}
           <Link className="links" to="/">
-            Event
+            Event Management system
           </Link>{" "}
         </h3>
         <div className="header-special">

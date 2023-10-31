@@ -9,7 +9,7 @@ export const Homepage = () => {
         <h3>
           {" "}
           <Link
-            className="link"
+            className="homeLink"
             to="https://github.com/Sonualam-bot/event-management-system"
             target="_blank"
           >
