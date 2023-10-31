@@ -10,7 +10,6 @@ export const VolunteerDetail = () => {
   const selectedVolunteer = volunteers?.find(
     (volunteer) => volunteer._id === volunteerId
   );
-  // console.log(selectedVolunteer);
 
   const { name, contact, skills, availability, areasOfInterest, events } =
     selectedVolunteer;
@@ -27,7 +26,7 @@ export const VolunteerDetail = () => {
             {" "}
             Areas Of Interest: {areasOfInterest}
           </li>
-          <li className="list-group-item"> Events: {events}</li>
+          <li className="list-group-item"> Events: {events.name}</li>
         </ul>
       </div>
     </>

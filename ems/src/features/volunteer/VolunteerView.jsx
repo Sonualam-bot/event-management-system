@@ -67,7 +67,10 @@ export const VolunteerView = () => {
                     <th scope="row"> {index + 1} </th>
                     <td>
                       {" "}
-                      <Link className="link" to={`/details/${volunteer?._id}`}>
+                      <Link
+                        className="link"
+                        to={`/volunteerDetails/${volunteer?._id}`}
+                      >
                         {volunteer?.name}
                       </Link>{" "}
                     </td>

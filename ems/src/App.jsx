@@ -22,7 +22,10 @@ function App() {
           <Route path="/events" element={<EventView />} />
           <Route path="/details/:eventId" element={<EventDetail />} />
           <Route path="/volunteer" element={<VolunteerView />} />
-          <Route path="/details/:volunteerId" element={<VolunteerDetail />} />
+          <Route
+            path="/volunteerDetails/:volunteerId"
+            element={<VolunteerDetail />}
+          />
         </Routes>
       </div>
     </>

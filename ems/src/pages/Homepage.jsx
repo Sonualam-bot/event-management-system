@@ -1,7 +1,22 @@
+import "../Css/Home.css";
+import { Link } from "react-router-dom";
+
 export const Homepage = () => {
   return (
     <>
-      <h2>Homepage</h2>
+      <div className="homepage">
+        <h1> Welcome to Your Event Management Application</h1>
+        <h3>
+          {" "}
+          <Link
+            className="link"
+            to="https://github.com/Sonualam-bot/event-management-system"
+            target="_blank"
+          >
+            Github
+          </Link>{" "}
+        </h3>
+      </div>
     </>
   );
 };
